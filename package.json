@@ -1,0 +1,32 @@
+{
+  "name": "passport-strategy-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "build": "tsc && tsc -d",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kg0r0/passport-strategy-example.git"
+  },
+  "author": "kg0r0",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kg0r0/passport-strategy-example/issues"
+  },
+  "homepage": "https://github.com/kg0r0/passport-strategy-example#readme",
+  "dependencies": {
+    "passport": "^0.6.0",
+    "passport-strategy": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/passport": "^1.0.12",
+    "@types/passport-strategy": "^0.2.35"
+  }
+}
