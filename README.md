@@ -3,3 +3,4 @@
 
 ## References
 - https://github.com/jaredhanson/passport-strategy#readme
+- https://www.passportjs.org/packages/
