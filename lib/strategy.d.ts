@@ -1,7 +1,6 @@
 import { Strategy as PassportStrategy } from 'passport-strategy';
+import { AuthenticateOptions } from 'passport';
 import { Request } from 'express';
-export interface AuthenticateOptions {
-}
 export declare abstract class AbstractStrategy extends PassportStrategy {
     name: string;
     constructor(options?: any);

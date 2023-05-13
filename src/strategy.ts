@@ -1,17 +1,20 @@
 import { Strategy as PassportStrategy } from 'passport-strategy';
+import { AuthenticateOptions } from 'passport'
 import { Request } from 'express';
-
-export interface AuthenticateOptions {
-}
 
 export abstract class AbstractStrategy extends PassportStrategy {
   name: string;
   constructor(options?: any) {
     super();
-    this.name = options?.name || 'example';
+    this.name = options.name || 'example';
   }
 
   authenticate(req: Request, options: AuthenticateOptions): void {
+    if (options.authInfo === false) {
+      const res = req.res
+      res?.send('error');
+      return
+    }
     console.log('Logged-In');
     this.pass();
   }
