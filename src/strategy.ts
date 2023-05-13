@@ -10,32 +10,25 @@ export abstract class AbstractStrategy extends PassportStrategy {
     super();
     this.name = options?.name || 'example';
   }
-}
-
-export class Strategy extends AbstractStrategy {
 
   authenticate(req: Request, options: AuthenticateOptions): void {
+    const res = req.res
+    res?.send('Logged-In');
   }
 
   success(user: any, info?: any): void {
-
-  }
-
-  fail(challenge: any, status: number): void;
-  fail(status: number): void;
-  fail(challenge: unknown, status?: unknown): void {
-
-  }
-
-  redirect(url: string, status?: number | undefined): void {
-
-  }
-
-  pass(): void {
-
+    super.success(user, info);
   }
 
   error(err: Error): void {
-
+    super.error(err);
   }
+
+  redirect(url: string, status?: number): void {
+    super.redirect(url, status);
+  }
+
+}
+
+export class Strategy extends AbstractStrategy {
 }
