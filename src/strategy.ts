@@ -5,6 +5,11 @@ export interface AuthenticateOptions {
 }
 
 export abstract class AbstractStrategy extends PassportStrategy {
+  name: string;
+  constructor(options?: any) {
+    super();
+    this.name = options?.name || 'example';
+  }
 }
 
 export class Strategy extends AbstractStrategy {

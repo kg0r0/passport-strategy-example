@@ -3,6 +3,8 @@ import { Request } from 'express';
 export interface AuthenticateOptions {
 }
 export declare abstract class AbstractStrategy extends PassportStrategy {
+    name: string;
+    constructor(options?: any);
 }
 export declare class Strategy extends AbstractStrategy {
     authenticate(req: Request, options: AuthenticateOptions): void;
