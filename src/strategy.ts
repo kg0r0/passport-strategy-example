@@ -12,8 +12,8 @@ export abstract class AbstractStrategy extends PassportStrategy {
   }
 
   authenticate(req: Request, options: AuthenticateOptions): void {
-    const res = req.res
-    res?.send('Logged-In');
+    console.log('Logged-In');
+    this.pass();
   }
 
   success(user: any, info?: any): void {

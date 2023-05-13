@@ -16,7 +16,10 @@ app.get('/', (req: express.Request, res: express.Response) => {
 });
 
 app.get('/login',
-  passport.authenticate('example', {})
+  passport.authenticate('example', {}),
+  (req: express.Request, res: express.Response) => {
+    res.send('OK')
+  }
 );
 
 app.listen(3000, () => {
