@@ -6,6 +6,5 @@ export declare class Strategy extends PassportStrategy {
     constructor(options?: any);
     authenticate(req: Request, options: AuthenticateOptions): void;
     success(user: any, info?: any): void;
-    error(err: Error): void;
-    redirect(url: string, status?: number): void;
+    fail(status: number): void;
 }

@@ -22,12 +22,8 @@ export class Strategy extends PassportStrategy {
     super.success(user, info);
   }
 
-  error(err: Error): void {
-    super.error(err);
-  }
-
-  redirect(url: string, status?: number): void {
-    super.redirect(url, status);
+  fail(status: number): void {
+    super.fail(status); 
   }
 
 }
