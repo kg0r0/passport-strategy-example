@@ -12,3 +12,7 @@ $ npm run dev
 listen port: 3000
 ```
 
+```
+$ curl -X POST -d 'username=johndoe&password=secret'  http:///localhost:3000
+wellcome johndoe!
+```
