@@ -13,6 +13,12 @@ listen port: 3000
 ```
 
 ```
-$ curl -X POST -d 'username=johndoe&password=secret'  http:///localhost:3000
+$ curl -c cookie.txt -X POST -d 'username=johndoe&password=secret'  http:///localhost:3000/login
 wellcome johndoe!
+
+$  curl -b cookie.txt http:///localhost:3000/content
+Hello johndoe!
+
+$ curl http:///localhost:3000/content
+Unauthorized
 ```
